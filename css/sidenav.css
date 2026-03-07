@@ -1,0 +1,71 @@
+.menu button {
+  padding: 2px;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  color: rgb(0, 0, 0);
+}
+
+.menu button ion-icon {
+  font-size: 35px;
+}
+
+.phone_nav {
+  height: 100%;
+  width: 0;
+  margin-top: 60px;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.289);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+
+.phone_nav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  border: 2px solid transparent;
+  color: #030303;
+  display: block;
+  transition: 0.3s;
+}
+
+.phone_nav .phone_navi:hover {
+  background: rgba(66, 168, 227, 0.581);
+}
+
+.phone_nav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+@media (width < 600px) {
+  .nav {
+    display: none;
+  }
+  .topnav {
+    width: 100%;
+    height: 60px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  section {
+    margin-left: 0px;
+    top: 0;
+  }
+  .topnav .logo .imglogo{
+    width: 100px;
+    margin-left: 20px;
+    margin-top: -1px;
+  }
+}
+
