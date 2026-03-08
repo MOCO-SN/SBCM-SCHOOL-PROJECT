@@ -55,7 +55,9 @@
   left:0;
   width:100%;
   height:70px;
-  background:#fff;
+  background: rgba(255, 255, 255, 0.289);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   display:flex;
   align-items:center;
   justify-content:space-between;
