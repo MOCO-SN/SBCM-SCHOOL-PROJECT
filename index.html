@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <script src="https://kit.fontawesome.com/your-kit-id.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/footer.css">
     <!-- <script type="module" src="./js/main.js"></script> -->
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
@@ -17,6 +19,7 @@
     <link rel="stylesheet" href="./css/notification.css">
     <link rel="stylesheet" href="./css/sidenav.css">
     <link rel="stylesheet" href="./css/about.css">
+    <link rel="stylesheet" href="./css/notificationUpdater.css">
     <link rel="stylesheet" href="./css/slider.css">
     <link rel="stylesheet" href="./css/toppers.css">
     <link rel="stylesheet" href="./css/events.css">
@@ -24,6 +27,35 @@
 </head>
 
 <body>
+
+    <div id="popupModal" class="popup-modal">
+
+        <div class="popup-content">
+
+            <span class="close-btn"><ion-icon name="close-circle-outline"></ion-icon></span>
+
+            <h2>🎓 Admission Open 2026</h2>
+
+            <p>
+                Admissions are now open for the academic session 2026.
+                Apply now to secure your seat.
+            </p>
+
+            <div class="popup-notice">
+                <h3>📢 Latest Notification</h3>
+                <ul>
+                    <li>Admission form available from 20 March</li>
+                    <li>Entrance exam on 10 April</li>
+                    <li>Last date to apply: 5 April</li>
+                </ul>
+            </div>
+
+            <button class="popup-btn">Apply Now</button>
+
+        </div>
+
+    </div>
+
     <div class="topnav">
 
         <div class="logo">
@@ -57,6 +89,7 @@
     </div>
     <section id="home-section">
         <div class="slider">
+
             <div class="image-container">
                 <img src="https://www.sbcmschool.com/Content/assets/images/SBCS_images/SBCS_bannes02.png?width=1920"
                     alt="img1" />
@@ -64,19 +97,24 @@
                     alt="img2" />
                 <img src="https://www.sbcmschool.com/Content/assets/images/SBCS_images/SBCS_images_GALLERY/sbcs_school_event/Image_1.jpg?width=264"
                     alt="img3" />
-
             </div>
 
-            <!-- Navigation Buttons -->
+            <!-- Dialog Overlay -->
+            <div class="slider-dialog">
+                <h2>Welcome to SBCM School</h2>
+                <p>Empowering students with quality education and innovation.</p>
+                <button>Learn More</button>
+            </div>
+
             <button class="prev">&#10094;</button>
             <button class="next">&#10095;</button>
 
-            <!-- Dots -->
             <div class="dots"></div>
+
         </div>
     </section>
 
-    <h2>About us</h2>
+    <h2 class="title-main">About us</h2>
     <section id="about-section" class="principal-section">
 
         <div class="principal-card">
@@ -122,7 +160,7 @@
 
     <section id="about-section">
 
-        <h3>Featured by SBCM School</h3>
+        <h2 class="title-main">Featured by us</h2>
         <div class="about-container">
 
             <div class="about-card">
@@ -169,9 +207,8 @@
 
     </section>
 
+    <h2 class="title-main">School Toppers</h2>
     <section id="topper-section">
-
-        <h2 class="section-title">School Toppers</h2>
 
         <div class="topper-container">
 
@@ -206,7 +243,7 @@
         </div>
 
     </section>
-    <h2>Popular Events Days</h2>
+    <h2 class="title-main">Popular Events Days</h2>
     <section id="events">
         <section class="card-section">
             <div class="course-card">
@@ -281,7 +318,7 @@
         </section>
 
 
-        <h2>Our Testimonials</h2>
+        <h2 class="title-main">Our Testimonials</h2>
 
         <section id="testimonials">
             <div class="carousel">
@@ -338,6 +375,54 @@
                 <div class="modal-subtitle" id="modalSubtitle"></div>
             </div>
         </div>
+
+        <footer class="footer">
+
+            <div class="footer-container">
+
+                <!-- School Info -->
+                <div class="footer-about">
+                    <h3>SBCM School</h3>
+                    <p>
+                        Sri Bhagwan Chinta Mani School focuses on holistic education,
+                        innovation, and student development to prepare learners for the future.
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Admissions</a></li>
+                        <li><a href="#">Gallery</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Social Media -->
+                <div class="footer-social">
+                    <h3>Follow Us</h3>
+
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!-- Bottom -->
+            <div class="footer-bottom">
+                <p>© 2026 SBCM School. All Rights Reserved.</p>
+            </div>
+
+        </footer>
 </body>
 <script>
     document.addEventListener("DOMContentLoaded", function () {
@@ -398,6 +483,25 @@
         document.addEventListener("keydown", (e) => { if (e.key === "Escape") modal.style.display = "none"; });
 
     });
+</script>
+<script>
+
+    window.onload = function () {
+
+        if (!localStorage.getItem("popupShown")) {
+            document.getElementById("popupModal").style.display = "flex";
+            localStorage.setItem("popupShown", "yes");
+        }
+
+    }
+    window.onload = function () {
+        document.getElementById("popupModal").style.display = "flex";
+    }
+
+    document.querySelector(".close-btn").onclick = function () {
+        document.getElementById("popupModal").style.display = "none";
+    }
+
 </script>
 <script src="/js/silder.js"></script>
 <script src="/js/sidenav.js"></script>
