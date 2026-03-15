@@ -98,6 +98,7 @@
 }
 
 /* Links container */
+/* Links container */
 .nav-links{
   display:flex;
   align-items:center;
@@ -105,6 +106,7 @@
 
 /* Links */
 .topnav_links{
+  position:relative;
   text-decoration:none;
   color:#333;
   font-size:16px;
@@ -113,10 +115,28 @@
   transition:0.3s;
 }
 
+/* Hover color */
 .topnav_links:hover{
   color:#0077ff;
+   transform:scale(1.05);
+   text-shadow:0 0 8px rgba(0,119,255,0.6);
 }
 
+/* Animated underline */
+.topnav_links::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:-4px;
+  width:0%;
+  height:2px;
+  background:#0077ff;
+  transition:0.3s ease;
+}
+
+.topnav_links:hover::after{
+  width:100%;
+}
 /* Menu button */
 .menu{
   display:none;

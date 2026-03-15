@@ -7,7 +7,10 @@
     grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
     gap:40px;
 }
-
+.footerimg{
+    width: 350px;
+    padding: 10px 10px 10px;
+}
 /* Titles */
 .footer h3{
     color: #3b82f6;
