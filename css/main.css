@@ -95,7 +95,7 @@
 
 .imglogo{
   height:45px;
-  width: 300px;
+  width: auto;
 }
 
 /* Links container */
@@ -150,6 +150,10 @@
     display:none;
   }
 
+  .imglogo{
+  height:45px;
+  width: 450;
+}
   .menu{
     display:block;
   }
