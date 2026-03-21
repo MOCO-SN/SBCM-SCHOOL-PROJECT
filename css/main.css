@@ -96,6 +96,40 @@
 .imglogo{
   height:45px;
   width: auto;
+  max-width: 200px;
+  transition: all 0.3s ease;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .imglogo {
+    height: 40px;
+    max-width: 180px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .imglogo {
+    height: 38px;
+    max-width: 150px;
+  }
+}
+
+/* Small mobile */
+@media (max-width: 480px) {
+  .imglogo {
+    height: 35px;
+    max-width: 120px;
+  }
+}
+
+/* Extra small mobile */
+@media (max-width: 360px) {
+  .imglogo {
+    height: 30px;
+    max-width: 100px;
+  }
 }
 
 /* Links container */
