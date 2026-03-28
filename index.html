@@ -24,6 +24,13 @@
     <link rel="stylesheet" href="./css/toppers.css">
     <link rel="stylesheet" href="./css/events.css">
     <link rel="stylesheet" href="./css/testimonials.css">
+    
+    <style>
+        /* Additional popup JS styles */
+        .popup-content .close-btn ion-icon {
+            font-size: 36px;
+        }
+    </style>
 </head>
 
 <body>
@@ -80,7 +87,7 @@
 
     </div>
     <div id="mySidenav" class="phone_nav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <button  class="closebtn" onclick="closeNav()">&times;</button>
         <a class="phone_navi" href="#home-section">Home</a>
         <a class="phone_navi" href="#about-section">About</a>
         <a class="phone_navi" href="./others/galleryt.html">Gallary</a>
@@ -499,6 +506,53 @@
             </div>
 
         </footer>
+
+    <script>
+        // Popup Modal Functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const modal = document.getElementById('popupModal');
+            const closeBtn = document.querySelector('.popup-content .close-btn');
+            const applyBtn = document.querySelector('.popup-btn');
+            
+            // Show popup after page loads (with slight delay for effect)
+            setTimeout(() => {
+                if (modal) {
+                    modal.classList.add('show');
+                }
+            }, 800);
+            
+            // Close popup when clicking the close button
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    modal.classList.remove('show');
+                });
+            }
+            
+            // Close popup when clicking outside the content
+            if (modal) {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) {
+                        modal.classList.remove('show');
+                    }
+                });
+            }
+            
+            // Apply button action
+            if (applyBtn) {
+                applyBtn.addEventListener('click', function() {
+                    window.location.href = './others/AddmissionAndFees.html';
+                });
+            }
+            
+            // Close popup with Escape key
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal && modal.classList.contains('show')) {
+                    modal.classList.remove('show');
+                }
+            });
+        });
+    </script>
+
 </body>
 <script>
     document.addEventListener("DOMContentLoaded", function () {

@@ -4,8 +4,9 @@
   border: none;
   color: #ffffff;
   border-radius: 12px;
-  background: #db1a1a;
+  background: linear-gradient(135deg, #db1a1a 0%, #b91c1c 100%);
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(219, 26, 26, 0.3);
 }
 
 .menu button ion-icon {
@@ -18,7 +19,7 @@
   background: transparent;
 }
 
-/* Phone Navigation - Clean Design */
+/* Phone Navigation - Glassmorphism Design */
 .phone_nav {
   height: 100%;
   width: 0;
@@ -27,23 +28,39 @@
   z-index: 999;
   top: 0;
   left: 0;
-  background: #1a1a2e;
+  background: rgba(26, 26, 46, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   overflow-x: hidden;
   transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   padding-top: 60px;
   border-right: 3px solid #db1a1a;
+  box-shadow: 0 25px 80px rgba(0, 0, 0, 0.4);
+}
+
+/* Gradient overlay for phone nav */
+.phone_nav::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(180deg, rgba(219, 26, 26, 0.1) 0%, transparent 30%);
+  pointer-events: none;
 }
 
 .phone_nav a {
-  padding: 16px 16px 16px 40px;
+  padding: 18px 18px 18px 45px;
   text-decoration: none;
   font-size: 20px;
   color: #ffffff;
   display: block;
   transition: all 0.3s ease;
   position: relative;
-  border-bottom: 1px solid #333;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   letter-spacing: 0.5px;
+  font-weight: 500;
 }
 
 .phone_nav a::before {
@@ -54,7 +71,7 @@
   transform: translateY(-50%);
   width: 4px;
   height: 0;
-  background: #db1a1a;
+  background: linear-gradient(180deg, #db1a1a, #ff6b6b);
   border-radius: 2px;
   transition: height 0.3s ease;
 }
@@ -64,9 +81,9 @@
 }
 
 .phone_nav .phone_navi:hover {
-  background: #333;
-  color: #db1a1a;
-  padding-left: 50px;
+  background: rgba(219, 26, 26, 0.2);
+  color: #ff6b6b;
+  padding-left: 55px;
 }
 
 .phone_nav .closebtn {
@@ -76,19 +93,19 @@
   font-size: 40px;
   color: #ffffff;
   cursor: pointer;
-  transition: all 0.3s ease;
   width: 50px;
   height: 50px;
   display: flex;
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  background: #db1a1a;
+  background: linear-gradient(135deg, #db1a1a 0%, #b91c1c 100%);
+  box-shadow: 0 4px 15px rgba(219, 26, 26, 0.4);
 }
 
 .phone_nav .closebtn:hover {
-  background: #b91c1c;
-  transform: rotate(90deg);
+  background: linear-gradient(135deg, #ff6b6b 0%, #db1a1a 100%);
+  transform: scale(1.1);
 }
 
 /* ===== RESPONSIVE DESIGN ===== */
@@ -114,7 +131,9 @@
     width: 100%;
     height: 60px;
     padding: 8px 20px;
-    background: #1a1a2e;
+    background: rgba(255, 255, 255, 0.97);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
   }
   
   section {
@@ -153,7 +172,12 @@
   }
   
   .menu button:hover {
-    background: #b91c1c;
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(219, 26, 26, 0.4);
+  }
+  
+  .phone_nav {
+    margin-top: 60px;
   }
 }
 
@@ -180,20 +204,15 @@
   
   .phone_nav {
     margin-top: 55px;
+    padding-top: 50px;
   }
   
   .phone_nav a {
     font-size: 18px;
-    padding: 14px 14px 14px 35px;
+    padding: 16px 16px 16px 40px;
   }
   
-  .phone_nav .closebtn {
-    font-size: 36px;
-    top: 8px;
-    right: 20px;
-    width: 44px;
-    height: 44px;
-  }
+
 }
 
 /* Small Mobile */
@@ -220,16 +239,16 @@
   
   .phone_nav {
     margin-top: 52px;
-    padding-top: 50px;
+    padding-top: 45px;
   }
   
   .phone_nav a {
     font-size: 16px;
-    padding: 12px 12px 12px 30px;
+    padding: 14px 14px 14px 35px;
   }
   
   .phone_nav .phone_navi:hover {
-    padding-left: 42px;
+    padding-left: 48px;
   }
   
   .phone_nav .closebtn {
@@ -264,6 +283,6 @@
   
   .phone_nav a {
     font-size: 15px;
-    padding: 10px 10px 10px 25px;
+    padding: 12px 12px 12px 30px;
   }
 }
