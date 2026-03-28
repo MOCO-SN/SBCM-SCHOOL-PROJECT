@@ -1,82 +1,135 @@
+/* Menu Icon - Clean Red */
 .menu button {
-  padding: 2px;
-  background: rgba(0, 0, 0, 0);
+  padding: 0;
   border: none;
-  color: rgb(0, 0, 0);
+  color: #ffffff;
+  border-radius: 12px;
+  background: #db1a1a;
+  transition: all 0.3s ease;
 }
 
 .menu button ion-icon {
-  font-size: 35px;
+  font-size: 32px;
+  transition: all 0.3s ease;
 }
 
 .menu button ion-icon:hover {
-  color: rgb(186, 47, 23);
+  color: #ffffff;
   background: transparent;
 }
 
-
+/* Phone Navigation - Clean Design */
 .phone_nav {
   height: 100%;
   width: 0;
-  margin-top: 60px;
+  margin-top: 70px;
   position: fixed;
   z-index: 999;
   top: 0;
   left: 0;
-  background: rgba(255, 255, 255, 0.289);
-  backdrop-filter: blur(12px);
-  -webkit-backdrop-filter: blur(12px);
+  background: #1a1a2e;
   overflow-x: hidden;
-  transition: 0.5s;
+  transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   padding-top: 60px;
+  border-right: 3px solid #db1a1a;
 }
 
 .phone_nav a {
-  padding: 8px 8px 8px 32px;
+  padding: 16px 16px 16px 40px;
   text-decoration: none;
-  font-size: 25px;
-  border: 2px solid transparent;
-  color: #030303;
+  font-size: 20px;
+  color: #ffffff;
   display: block;
-  transition: 0.3s;
+  transition: all 0.3s ease;
+  position: relative;
+  border-bottom: 1px solid #333;
+  letter-spacing: 0.5px;
+}
+
+.phone_nav a::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 0;
+  background: #db1a1a;
+  border-radius: 2px;
+  transition: height 0.3s ease;
+}
+
+.phone_nav a:hover::before {
+  height: 60%;
 }
 
 .phone_nav .phone_navi:hover {
-  background: rgba(66, 168, 227, 0.581);
+  background: #333;
+  color: #db1a1a;
+  padding-left: 50px;
 }
 
 .phone_nav .closebtn {
   position: absolute;
-  top: 0;
+  top: 10px;
   right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+  font-size: 40px;
+  color: #ffffff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #db1a1a;
 }
-@media (width < 600px) {
+
+.phone_nav .closebtn:hover {
+  background: #b91c1c;
+  transform: rotate(90deg);
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Desktop - Hide mobile nav elements */
+@media (min-width: 1025px) {
+  .nav {
+    display: flex !important;
+  }
+  
+  .menu {
+    display: none !important;
+  }
+}
+
+/* Tablet and Mobile */
+@media (max-width: 1024px) {
   .nav {
     display: none;
   }
+  
   .topnav {
     width: 100%;
     height: 60px;
-    padding: 10px 15px;
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(12px);
+    padding: 8px 20px;
+    background: #1a1a2e;
   }
+  
   section {
     margin-left: 0px;
     top: 0;
   }
-  .topnav .logo .imglogo{
-    height: 35px;
+  
+  .topnav .logo .imglogo {
+    height: 38px;
     width: auto;
-    max-width: 110px;
-    margin-left: 10px;
-    margin-top: -1px;
+    max-width: 140px;
+    margin-left: 5px;
+    margin-top: 0px;
   }
   
-  /* Enhanced menu button for very small screens */
   .menu {
     display: flex;
     align-items: center;
@@ -84,18 +137,133 @@
   }
   
   .menu button {
-    width: 44px;
-    height: 44px;
-    min-width: 44px;
-    min-height: 44px;
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    min-height: 46px;
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 12px;
+  }
+  
+  .menu button ion-icon {
+    font-size: 26px;
+  }
+  
+  .menu button:hover {
+    background: #b91c1c;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .topnav {
+    padding: 8px 15px;
+    height: 55px;
+  }
+  
+  .topnav .logo .imglogo {
+    height: 34px;
+    max-width: 120px;
+  }
+  
+  .menu button {
+    width: 42px;
+    height: 42px;
   }
   
   .menu button ion-icon {
     font-size: 24px;
   }
+  
+  .phone_nav {
+    margin-top: 55px;
+  }
+  
+  .phone_nav a {
+    font-size: 18px;
+    padding: 14px 14px 14px 35px;
+  }
+  
+  .phone_nav .closebtn {
+    font-size: 36px;
+    top: 8px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+  }
 }
 
+/* Small Mobile */
+@media (max-width: 480px) {
+  .topnav {
+    padding: 6px 12px;
+    height: 52px;
+  }
+  
+  .topnav .logo .imglogo {
+    height: 30px;
+    max-width: 100px;
+  }
+  
+  .menu button {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
+  
+  .menu button ion-icon {
+    font-size: 22px;
+  }
+  
+  .phone_nav {
+    margin-top: 52px;
+    padding-top: 50px;
+  }
+  
+  .phone_nav a {
+    font-size: 16px;
+    padding: 12px 12px 12px 30px;
+  }
+  
+  .phone_nav .phone_navi:hover {
+    padding-left: 42px;
+  }
+  
+  .phone_nav .closebtn {
+    font-size: 32px;
+    top: 6px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Extra Small Mobile */
+@media (max-width: 360px) {
+  .topnav {
+    padding: 5px 10px;
+    height: 48px;
+  }
+  
+  .topnav .logo .imglogo {
+    height: 28px;
+    max-width: 90px;
+  }
+  
+  .menu button {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .menu button ion-icon {
+    font-size: 20px;
+  }
+  
+  .phone_nav a {
+    font-size: 15px;
+    padding: 10px 10px 10px 25px;
+  }
+}
